@@ -1,0 +1,36 @@
+{
+  "name": "bdoc",
+  "version": "0.1",
+  "description": "A simple program and library to auto generate API documentation for Python modules.",
+  "url": "https://github.com/BlackEarth/bdoc",
+  "author": "Sean Harrison",
+  "author_email": "sah@blackearthgroup.com",
+  "license": "LGPL 3.0",
+  "classifiers": [
+        "Topic :: Documentation",
+        "Topic :: Software Development :: Documentation",
+        "Topic :: Utilities",
+        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+        "Development Status :: 1 - Alpha",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+  ],
+  "provides": "bdoc",
+  "scripts": ["scripts/pdoc"],
+  "platforms":"ANY",
+  "entry_points": {},
+  "install_requires": ["mako", "markdown"],
+  "extras_require": {
+    "syntax_highlighting": ["pygments"],
+    "dev": [],
+    "test": []
+  },
+  "package_data":{"pdoc": ["templates/*"]},
+  "data_files":[
+    ["share/pdoc", ["README.md", "longdesc.rst",
+                    "UNLICENSE", "INSTALL", "CHANGELOG"]],
+    ["share/doc/pdoc", ["doc/pdoc/index.html"]],
+  ]
+}
